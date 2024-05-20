@@ -21,7 +21,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/Shahzaib-ur-Rehman/news-letter-signup)
-- Live Site URL: [News-letter-signup](https://your-live-site-url.com)
+- Live Site URL: [News-letter-signup](https://news-letter-signup-zeta.vercel.app/)
 
 ## My process
 
