@@ -1,0 +1,146 @@
+:root {
+  --clr-primary-hsl-400: 4, 100%, 67%;
+  --clr-primary-400: hsl(4, 100%, 67%);
+
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-300: hsl(231, 7%, 60%);
+  --clr-neutral-600: hsl(235, 18%, 26%);
+  --clr-neutral-900: hsl(234, 29%, 20%);
+
+  --ff-base: "Roboto", sans-serif;
+
+  --fs-100: 0.938rem;
+  --fs-200: 1rem;
+  --fs-900: 2rem;
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+}
+
+@media (min-width: 50rem) {
+  :root {
+    --fs-900: 3rem;
+  }
+}
+
+/* reset styles */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* general styles  */
+body {
+  font-family: var(--ff-base);
+  font-size: var(--fs-200);
+  display: grid;
+  min-height: 100vh;
+  color: var(--clr-neutral-900);
+  background-color: var(--clr-neutral-900);
+}
+
+@media (min-width: 50rem) {
+  body {
+    place-content: center;
+  }
+}
+
+/* utillities */
+
+.title {
+  font-size: var(--fs-900);
+  font-weight: var(--fw-bold);
+}
+
+.btn {
+  border: 0;
+  border-radius: 0.4rem;
+  padding: 1rem;
+  cursor: pointer;
+  color: var(--clr-neutral-100);
+  background: var(--clr-neutral-900);
+}
+
+.btn:hover,
+.btn:focus-visible {
+  background: linear-gradient(
+    to right,
+    hsla(var(--clr-primary-hsl-400), 0.9),
+    hsla(var(--clr-primary-hsl-400), 1)
+  );
+  box-shadow: 0rem 0.5rem 0.8rem 0.2rem hsla(var(--clr-primary-hsl-400), 0.5);
+}
+
+.flex-spaceout {
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid-item-baseline {
+  display: grid;
+  gap: 1.5rem;
+  align-content: end;
+}
